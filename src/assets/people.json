@@ -1,0 +1,26 @@
+[
+    {
+        "name": "john lewis",
+        "status": "currently coding",
+        "website": {
+            "url": "https://www.rhimat.com", 
+            "name": "rhimat"
+        },
+        "twitter": {
+            "url": "https://twitter.com/juristr", 
+            "name": "@john"
+        }
+    },
+    {
+        "status": "currently driving",
+        "name": "Aileen lewis",
+        "website": {
+            "url": "https://www.rhimat.com", 
+            "name": "rhimat"
+        },
+        "twitter": {
+            "url": "https://twitter.com/juristr", 
+            "name": "@aileen"
+        }
+    }
+]

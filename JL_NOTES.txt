@@ -1,0 +1,92 @@
+Angular 2 first ng2 app
+
+video
+	http://juristr.com/blog/2016/10/lets-create-ur-first-ng2-app/
+	http://juristr.com/blog/2016/8/ng2-forms-first-look/
+	http://juristr.com/blog/2016/06/rxjs-1st-steps-subject
+	http://juristr.com/blog/2016/04/learning-angula2-directives-course
+	youtube - angularconnect conference videos
+	
+tooling
+	visual studio code
+	node and npm
+	angular cli
+		install using 
+			npm install -g angular-cli
+		web site
+			https://cli.angular.io/
+		github
+			https://github.com/angular/angular-cli
+
+Create New Project
+
+	ng new ng2firstapp
+	
+	cd ng2firstapp
+	
+	code .
+	
+Compile and run the project
+
+	ng serve
+	
+	open http://localhost:4200
+	
+Create a new module for 'people'
+	Open terminal in vs code
+	type 	ng generate module people
+	or
+			ng g module people
+	
+	To make the new people module available
+		Edit people.module.ts to Export the PeopleComponent
+			@NgModule({ ... 
+				exports: [
+					PeopleComponent
+					], ... })
+		
+		Edit app.module.ts
+			import { PeopleModule } from './people/people.module';
+		
+			and add PeopleModule to 
+			@NgModule({ Imports@ [ ..., PeopleModule ], ...})
+
+	Use the component in app.component.html
+	
+		<app-people></app-people>
+		
+		
+	To make a new userprofile component in the people module
+		ng g component people/profile
+		
+		Edit people/profile/profile.component.ts
+			remove the app- prefix from selector
+			Use @Input() person; to supply a person value to the component
+			Copy the html for a person into profile.component.html
+		
+	
+		Import the profile component into the people module
+			import { ProfileComponent } from './profile/profile.component';
+			declarations: [PeopleComponent, ProfileComponent]
+			
+		Use the profile component in people.component.html
+		
+			<profile [person]='person' *ngFor="let person of people"></profile>
+		
+		
+	To make a newPerson component in the people module
+		ng g component people/newPerson
+			
+			remove the app- prefix from selector
+
+			and add PeopleModule to 
+			@NgModule({ Imports@ [ ..., NewPersonModule ], ...})
+
+		Use the profile component in people.component.html
+		
+		<profile [person]='person' *ngFor="let person of people"></profile>
+		
+	
+	To make a new peopleService in the people module
+	
+		ng g service people/people
