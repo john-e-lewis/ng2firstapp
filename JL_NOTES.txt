@@ -1,4 +1,4 @@
-Angular 2 first ng2 app
+Angular 2 first ng2 App
 
 video
 	http://juristr.com/blog/2016/10/lets-create-ur-first-ng2-app/
