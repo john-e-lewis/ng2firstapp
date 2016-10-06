@@ -7,7 +7,7 @@ video
 	http://juristr.com/blog/2016/04/learning-angula2-directives-course
 	youtube - angularconnect conference videos
 	
-tooling
+Tooling
 	visual studio code
 	node and npm
 	angular cli
